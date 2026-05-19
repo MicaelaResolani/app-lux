@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>M.R. Private Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-flash-bar">
+        BOUTIQUE EXCLUSIVE: COMPLIMENTARY PREMIUM SHIPPING FOR A LIMITED TIME
+    </div>
+
+    <nav class="navbar">
+        <button class="menu-hamburger-btn" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <div class="nav-logo" onclick="navigateTo('catalog')" style="cursor:pointer;">M.R.</div>
+
+        <div class="nav-actions-right">
+            <button class="user-profile-btn" onclick="navigateTo('login')" title="Sign In / My Account">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+            
+            <button class="cart-toggle-btn" onclick="toggleCart()">
+                Boutique Bag (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </nav>
+
+    <div id="catalog-view">
+        <header>
+            <h1>M.R. Private Collection</h1>
+            <div class="subtitle">Curated Luxury / Flash Sales 2026</div>
+        </header>
+        <main id="catalog-container"></main>
+    </div>
+
+    <div id="product-detail-container" class="hidden"></div>
+
+    <div id="login-container" class="hidden"></div>
+
+    <div id="side-menu" class="menu-sidebar">
+        <div class="menu-header">
+            <h2>Boutiques</h2>
+            <button class="close-menu-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <ul class="menu-links">
+            <li><a href="#" onclick="navigateTo('catalog'); toggleMenu();">New Arrivals</a></li>
+            <li><a href="#">Watches & Fine Jewelry</a></li>
+            <li><a href="#">Apparel & Accessories</a></li>
+            <li><a href="#">Exclusives</a></li>
+        </ul>
+    </div>
+
+    <div id="side-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your VIP Selection</h2>
+            <button class="close-cart-btn" onclick="toggleCart()">✕</button>
+        </div>
+        
+        <div id="cart-items-container" class="cart-items-list"></div>
+        
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Estimated Total:</span>
+                <span id="cart-total-price">$0 USD</span>
+            </div>
+            <button class="btn-checkout" onclick="checkoutAlert()">Proceed to Secure Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

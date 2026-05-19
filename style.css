@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.top-flash-bar {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    min-width: 1200px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f5f5f7;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.nav-actions-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile-btn {
+    background: transparent;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.user-profile-btn:hover {
+    color: #666666;
+}
+
+.cart-toggle-btn {
+    background: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.menu-hamburger-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-hamburger-btn .line {
+    display: block;
+    width: 22px;
+    height: 1px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    color: #000000;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #666666;
+    letter-spacing: 4px;
+}
+
+#catalog-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 1200px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto 40px auto;
+}
+
+.luxury-card {
+    background: #ffffff;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.product-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.luxury-card:hover .product-img {
+    opacity: 0.85;
+}
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #111111;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5px 0;
+    cursor: pointer;
+}
+
+.product-title:hover {
+    color: #666666;
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.timer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: #999999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.btn-vip {
+    background: #000000;
+    border: none;
+    color: #ffffff;
+    padding: 14px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+}
+
+.btn-vip:hover {
+    background: #333333;
+}
+
+.pdp-wrapper {
+    display: flex;
+    gap: 60px;
+    width: 1200px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pdp-gallery {
+    display: flex;
+    gap: 20px;
+    width: 620px;
+}
+
+.pdp-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.thumb-img {
+    width: 80px;
+    height: 105px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease;
+    opacity: 0.6;
+}
+
+.thumb-img:hover, .thumb-img.active {
+    border-color: #000000;
+    opacity: 1;
+}
+
+.pdp-main-image-container {
+    width: 520px;
+    height: 640px;
+    background-color: #fafafa;
+}
+
+.pdp-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pdp-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.btn-back {
+    background: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #777777;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.btn-back:hover {
+    color: #000000;
+}
+
+.pdp-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.pdp-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.pdp-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.login-wrapper {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.login-breadcrumb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    color: #777777;
+    margin-bottom: 15px;
+}
+
+.login-wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #111111;
+    margin: 0 0 35px 0;
+    letter-spacing: -0.5px;
+}
+
+.login-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #111111;
+}
+
+.form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.login-link-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: #111111;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: right;
+    margin-top: -5px;
+}
+
+.login-form-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #444444;
+}
+
+.login-form-footer span {
+    text-decoration: underline;
+    color: #000000;
+    cursor: pointer;
+}
+
+.menu-sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.05);
+    border-right: 1px solid #e5e5e5;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+.menu-sidebar.open {
+    left: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 15px;
+}
+
+.menu-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.close-menu-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.menu-links li {
+    margin-bottom: 25px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.2s ease;
+}
+
+.menu-links a:hover {
+    color: #666666;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+    border-left: 1px solid #e5e5e5;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 15px;
+}
+
+.cart-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.close-cart-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart-items-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.cart-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f5f5f7;
+    padding-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.btn-remove-item {
+    background: transparent;
+    border: none;
+    color: #999999;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-decoration: underline;
+    padding: 0;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.btn-remove-item:hover {
+    color: #000000;
+}
+
+.cart-item-discount {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #d4af37;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.cart-footer {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-checkout {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-checkout:hover {
+    background: #333333;
+}
